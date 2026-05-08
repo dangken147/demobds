@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Anh Nguyễn Horizon Nha Trang</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#856A35",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#D1E2E2",
+                        "on-secondary-fixed": "#2B210D",
+                        "on-tertiary-container": "#0B1D1D",
+                        "error": "#B00020",
+                        "outline-variant": "#EAEAEA",
+                        "primary-fixed-dim": "#8A9BA8",
+                        "on-primary-fixed": "#F0F4F8",
+                        "tertiary-container": "#1E3838",
+                        "inverse-primary": "#BAC8D3",
+                        "surface-container-lowest": "#FFFFFF",
+                        "inverse-on-surface": "#F2F2F2",
+                        "primary-container": "#0A192F",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#FAFAFA",
+                        "tertiary": "#2A4D4D",
+                        "surface-container-highest": "#EAEAEA",
+                        "on-surface-variant": "#64748B",
+                        "error-container": "#FDEAEA",
+                        "inverse-surface": "#1C2B39",
+                        "surface-dim": "#F5F5F5",
+                        "surface": "#FFFFFF",
+                        "surface-container-high": "#F0F0F0",
+                        "surface-variant": "#F8FAFC",
+                        "secondary-container": "#FDFBF7",
+                        "surface-bright": "#FFFFFF",
+                        "on-tertiary-fixed": "#071212",
+                        "background": "#FFFFFF",
+                        "on-error-container": "#5C0011",
+                        "on-surface": "#1C2B39",
+                        "on-primary": "#FFFFFF",
+                        "on-secondary-fixed-variant": "#4D3B17",
+                        "surface-tint": "#1C2B39",
+                        "secondary-fixed-dim": "#D4AF37",
+                        "secondary": "#D4AF37",
+                        "outline": "#CBD5E1",
+                        "on-secondary": "#FFFFFF",
+                        "secondary-fixed": "#F0DFB8",
+                        "primary-fixed": "#2B3F50",
+                        "on-tertiary-fixed-variant": "#112626",
+                        "on-primary-container": "#E8EFF5",
+                        "on-primary-fixed-variant": "#16222E",
+                        "on-background": "#1C2B39",
+                        "tertiary-fixed-dim": "#A3BFC0",
+                        "surface-container": "#F9F9F9",
+                        "primary": "#0A192F"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "2px",
+                        "xl": "4px",
+                        "2xl": "8px",
+                        "full": "9999px"
+                    },
+                    "boxShadow": {
+                        "sm": "0 4px 12px rgba(0, 0, 0, 0.03)",
+                        "DEFAULT": "0 8px 24px rgba(0, 0, 0, 0.05)",
+                        "md": "0 12px 32px rgba(0, 0, 0, 0.08)",
+                        "lg": "0 16px 40px rgba(0, 0, 0, 0.12)",
+                        "xl": "0 24px 48px rgba(0, 0, 0, 0.15)"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin": "clamp(16px, 5vw, 64px)",
+                        "container-max": "1440px",
+                        "section-padding": "clamp(48px, 10vw, 120px)",
+                        "gutter": "clamp(16px, 4vw, 40px)"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display", "serif"],
+                        "body-lg": ["Manrope", "sans-serif"],
+                        "label-sm": ["Manrope", "sans-serif"],
+                        "body-md": ["Manrope", "sans-serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "display-xl": ["Playfair Display", "serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["clamp(32px, 6vw, 44px)", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-lg": ["clamp(16px, 2.5vw, 18px)", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["13px", {"lineHeight": "24px", "letterSpacing": "0.15em", "fontWeight": "600", "textTransform": "uppercase"}],
+                        "body-md": ["16px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                        "headline-md": ["clamp(24px, 5vw, 28px)", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "display-xl": ["clamp(40px, 8vw, 72px)", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-secondary selection:text-on-secondary">
+    <!-- TopNavBar Component -->
+    <nav
+        class="bg-surface/60 dark:bg-on-background/60 backdrop-blur-xl docked full-width top-0 sticky z-50 border-b border-outline-variant/20 shadow-sm">
+        <div class="max-w-[1440px] mx-auto flex justify-between items-center px-margin h-24">
+            <a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim" href="#">
+                Anh Nguyễn Horizon
+            </a>
+            <div class="hidden md:flex items-center gap-gutter">
+                <a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300"
+                    href="#location">Location</a>
+                <a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300"
+                    href="#amenities">Amenities</a>
+                <a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300"
+                    href="#floor-plan">Floor Plan</a>
+                <a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300"
+                    href="#reasons">Reasons to Buy</a>
+                <a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300"
+                    href="#faq">FAQ</a>
+            </div>
+            <a class="bg-secondary text-on-secondary px-6 py-3 rounded DEFAULT font-label-sm text-label-sm hover:bg-secondary-container hover:text-on-secondary-container transition-colors duration-300"
+                href="#booking">
+                Booking Now
+            </a>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative w-full h-[921px] min-h-[600px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img alt="Hero Background" class="w-full h-full object-cover"
+                data-alt="A breathtaking aerial view of a luxury coastal real estate development in Nha Trang during daytime. The modern high-rise building features extensive glass facades reflecting the vibrant blue ocean and clear sky. Lush green mountains serve as a dramatic backdrop, emphasizing the 'Tựa sơn nghinh hải' concept. The scene is bathed in bright, natural sunlight, projecting a premium, serene, and sophisticated lifestyle aesthetic consistent with high-end architectural photography."
+                src="img/05_OFH_tong_the_ngay_Final.jpg" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent"></div>
+        </div>
+        <div class="relative z-10 max-w-[1440px] w-full mx-auto px-margin text-center">
+            <h1 class="font-display-xl text-display-xl text-on-primary mb-unit drop-shadow-lg">
+                ANH NGUYỄN HORIZON NHA TRANG
+            </h1>
+            <p class="font-headline-md text-headline-md text-secondary-fixed mb-gutter">
+                Căn hộ khách sạn mặt tiền Trần Phú
+            </p>
+            <p class="font-body-lg text-body-lg text-surface-container-lowest mb-12 max-w-2xl mx-auto">
+                Bàn giao full nội thất chuẩn khách sạn
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-gutter">
+                <div
+                    class="bg-surface/10 backdrop-blur-md border border-outline-variant/30 px-8 py-4 rounded-lg text-on-primary">
+                    <span class="block font-label-sm text-label-sm text-secondary-fixed mb-1">MỞ BÁN</span>
+                    <span class="font-headline-md text-headline-md">19/05/2026</span>
+                </div>
+                <div
+                    class="bg-surface/10 backdrop-blur-md border border-outline-variant/30 px-8 py-4 rounded-lg text-on-primary">
+                    <span class="block font-label-sm text-label-sm text-secondary-fixed mb-1">GIÁ TỪ</span>
+                    <span class="font-headline-md text-headline-md">3,5 tỷ/căn</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 1: Overview -->
+    <section class="py-section-padding px-margin bg-surface">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+                    🌅 Biển trong lòng phố — 'Tựa sơn nghinh hải' trên trục Trần Phú
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">
+                    Căn hộ khách sạn giới hạn dành cho người muốn vừa nghỉ dưỡng như resort, vừa tích sản giá trị tại
+                    thành phố biển Nha Trang.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-16">
+                <div
+                    class="bg-surface-container-lowest p-8 rounded-xl border border-surface-variant shadow-sm flex flex-col items-center text-center hover:shadow-md transition-shadow">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-4">location_on</span>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-2 text-[24px] leading-[32px]">Vị trí
+                    </h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Mặt tiền Trần Phú, P. Vĩnh Nguyên, TP.
+                        Nha Trang</p>
+                </div>
+                <div
+                    class="bg-surface-container-lowest p-8 rounded-xl border border-surface-variant shadow-sm flex flex-col items-center text-center hover:shadow-md transition-shadow">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-4">domain</span>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-2 text-[24px] leading-[32px]">Quy mô
+                    </h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">1 tòa 10 tầng + 1 hầm • ~436 căn</p>
+                </div>
+                <div
+                    class="bg-surface-container-lowest p-8 rounded-xl border border-surface-variant shadow-sm flex flex-col items-center text-center hover:shadow-md transition-shadow">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-4">diamond</span>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-2 text-[24px] leading-[32px]">Bàn giao
+                    </h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Full nội thất cao cấp chuẩn khách sạn
+                    </p>
+                </div>
+            </div>
+            <div
+                class="bg-primary-container text-on-primary-container p-10 rounded-2xl text-center max-w-4xl mx-auto shadow-lg relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-primary opacity-20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-64 h-64 bg-secondary opacity-20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3">
+                </div>
+                <div class="relative z-10">
+                    <h3 class="font-headline-md text-headline-md mb-4 text-on-primary">🎯 NHẬN NGAY Bảng giá + Mặt bằng
+                        + Giỏ hàng view biển đẹp nhất hôm nay</h3>
+                    <p class="font-body-lg text-body-lg mb-8 text-primary-fixed-dim">👉 Để lại SĐT/Zalo — Chuyên viên tư
+                        vấn liên hệ trong 15 phút</p>
+                    <button
+                        class="bg-secondary text-on-secondary px-8 py-4 rounded-lg font-label-sm text-label-sm hover:bg-secondary-container hover:text-on-secondary-container transition-colors duration-300 inline-flex items-center gap-2">
+                        <span class="material-symbols-outlined">call</span>
+                        Đăng Ký Tư Vấn Ngay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 2: Pain Points -->
+    <section class="py-section-padding px-margin bg-surface-container-lowest border-t border-surface-variant/50">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+                    💭 Vì sao tệp Hà Nội &amp; Việt Kiều đang 'để mắt' đến dự án này?
+                </h2>
+                <p class="font-headline-md text-headline-md text-secondary text-[28px] leading-[36px]">
+                    Những trăn trở thầm kín
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                <div class="bg-error-container/20 border border-error-container p-8 rounded-xl flex gap-6">
+                    <div class="flex-shrink-0">
+                        <span class="material-symbols-outlined text-4xl text-error">lock</span>
+                    </div>
+                    <div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2 text-[20px] leading-[28px]">Tài
+                            sản "để đó"</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Mua xong khóa cửa, không khai thác
+                            được, chi phí giữ tài sản cao.</p>
+                    </div>
+                </div>
+                <div class="bg-surface-container-highest/30 border border-outline-variant/40 p-8 rounded-xl flex gap-6">
+                    <div class="flex-shrink-0">
+                        <span class="material-symbols-outlined text-4xl text-on-surface-variant">gavel</span>
+                    </div>
+                    <div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2 text-[20px] leading-[28px]">Lo
+                            pháp lý mơ hồ</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Ngại sản phẩm nghỉ dưỡng khó cho
+                            thuê, khó chuyển nhượng.</p>
+                    </div>
+                </div>
+                <div class="bg-secondary-container/20 border border-secondary-container p-8 rounded-xl flex gap-6">
+                    <div class="flex-shrink-0">
+                        <span class="material-symbols-outlined text-4xl text-secondary">heart_broken</span>
+                    </div>
+                    <div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2 text-[20px] leading-[28px]">Chất
+                            lượng không xứng tầm</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Đẹp trên quảng cáo nhưng trải
+                            nghiệm thật không tinh tế.</p>
+                    </div>
+                </div>
+                <div class="bg-primary-container/10 border border-primary-container/30 p-8 rounded-xl flex gap-6">
+                    <div class="flex-shrink-0">
+                        <span class="material-symbols-outlined text-4xl text-primary">hotel</span>
+                    </div>
+                    <div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2 text-[20px] leading-[28px]">Thiếu
+                            "nhà thứ 2" đúng nghĩa</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Bay vào nghỉ vẫn phải ở khách sạn
+                            đại trà, thiếu cảm giác thuộc về.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Section 3: Desires -->
+    <section class="py-section-padding px-margin bg-surface-container-low border-t border-outline-variant/20">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+                    Khao khát thật sự
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto italic">
+                    Phía sau những lo âu là mong muốn về một cuộc sống vẹn toàn tại tâm điểm vịnh biển.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                <div
+                    class="bg-surface-container-lowest p-8 rounded-xl border border-primary/10 flex gap-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex-shrink-0">
+                        <span class="material-symbols-outlined text-4xl text-secondary">auto_awesome</span>
+                    </div>
+                    <div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2 text-[20px] leading-[28px]">Tận
+                            hưởng &amp; Tích sản</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Một tài sản vừa tận hưởng (nghỉ
+                            dưỡng như resort), vừa tích sản (giữ giá trị theo thời gian).</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-surface-container-lowest p-8 rounded-xl border border-primary/10 flex gap-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex-shrink-0">
+                        <span class="material-symbols-outlined text-4xl text-secondary">terrain</span>
+                    </div>
+                    <div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2 text-[20px] leading-[28px]">Phong
+                            thủy vững chãi</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Chọn đúng nơi có phong thủy vững:
+                            lưng tựa núi, mặt hướng biển — bình an &amp; hanh thông.</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-surface-container-lowest p-8 rounded-xl border border-primary/10 flex gap-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex-shrink-0">
+                        <span class="material-symbols-outlined text-4xl text-secondary">spa</span>
+                    </div>
+                    <div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2 text-[20px] leading-[28px]">Tái
+                            tạo năng lượng</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Một chốn về để tái tạo năng lượng:
+                            chất lượng sống, tiện ích, dịch vụ, cộng đồng.</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-surface-container-lowest p-8 rounded-xl border border-primary/10 flex gap-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex-shrink-0">
+                        <span class="material-symbols-outlined text-4xl text-secondary">vpn_key</span>
+                    </div>
+                    <div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2 text-[20px] leading-[28px]">Linh
+                            hoạt khai thác</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Sản phẩm có thể ở linh hoạt và khai
+                            thác cho thuê khi không sử dụng.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-section-padding px-margin bg-surface-bright border-t border-outline-variant/20" id="usp">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+                    💎 5 USP Cốt Lõi — Điểm Khác Biệt Đáng Tiền
+                </h2>
+            </div>
+            <div class="flex flex-col gap-24">
+                <!-- USP 1 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+                    <div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4">1. Vị trí không thể sao chép
+                        </h3>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant">
+                            Mặt tiền Trần Phú — trục ven biển biểu tượng của Nha Trang. Quỹ đất ven biển trung tâm ngày
+                            càng hiếm — đây là "điểm neo giá trị" bền vững.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <img alt="View bird-eye 1" class="rounded-xl shadow-md w-full h-[300px] object-cover"
+                            src="img/OFV_VIEW_BIRD_1.jpg" />
+                        <img alt="View bird-eye 2" class="rounded-xl shadow-md w-full h-[300px] object-cover"
+                            src="img/OFV_VIEW_BIRD_2.jpg" />
+                    </div>
+                </div>
+                <!-- USP 2 -->
+                <div class="flex flex-col gap-8">
+                    <div class="max-w-3xl">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4">2. Phong thủy "Tựa sơn nghinh
+                            hải"</h3>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant">
+                            Lưng tựa núi — Mặt hướng vịnh. Không chỉ là view đẹp, đây là cảm giác "được che chở" (núi)
+                            và "mở ra hanh thông" (biển) — chạm đúng niềm tin của tệp HN &amp; Việt Kiều.
+                        </p>
+                    </div>
+                    <img alt="Tổng thể dự án về đêm" class="w-full h-[500px] object-cover rounded-2xl shadow-lg"
+                        src="img/10_OFH_tong_the_dem_Final.jpg" />
+                </div>
+                <!-- USP 3 & 4 Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/30 flex flex-col">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4 text-[28px]">3. "Art Apartment" —
+                            Sống trong thẩm mỹ</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            Căn hộ được định vị như một trải nghiệm nghệ thuật: từ sảnh đón, hành lang đến cảm giác bước
+                            vào căn hộ — đúng tệp khách đòi hỏi gu và "định danh chủ nhân".
+                        </p>
+                        <img alt="Ban công căn hộ — view biển trực diện" class="rounded-lg h-64 object-cover"
+                            src="img/04_View_ho_boi_em_Final.jpg" />
+                    </div>
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/30 flex flex-col">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4 text-[28px]">4. Bàn giao full nội
+                            thất chuẩn khách sạn</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            Mua xong dùng/khai thác được ngay. Rút ngắn thời gian hoàn thiện, giảm rủi ro "mua xong để
+                            đó", tối ưu trải nghiệm lưu trú &amp; cho thuê.
+                        </p>
+                        <img alt="View hồ bơi buổi chiều" class="rounded-lg h-64 object-cover"
+                            src="img/08_OFH_Ban_cong_Final.jpg" />
+                    </div>
+                </div>
+                <!-- USP 5 -->
+                <div class="bg-primary text-on-primary p-12 rounded-3xl overflow-hidden relative">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+                        <div>
+                            <h3 class="font-headline-md text-headline-md text-secondary-fixed mb-6">5. Hệ tiện ích đẳng
+                                cấp — Đi để nhớ, ở để mê</h3>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-surface-variant">
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-secondary-fixed">check_circle</span> Bể
+                                    bơi vô cực 102m trên cao</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-secondary-fixed">check_circle</span> Mega
+                                    Vertica — rừng nhiệt đới 2.000m²</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-secondary-fixed">check_circle</span> Art
+                                    Center &amp; Visual Bar</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-secondary-fixed">check_circle</span> Spa
+                                    cao cấp &amp; Gym &amp; Yoga</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-secondary-fixed">check_circle</span>
+                                    Buffet quốc tế &amp; Kid club</li>
+                            </ul>
+                        </div>
+                        <div class="relative">
+                            <img alt="Bể bơi vô cực 102m view trực diện biển ngọc Nha Trang"
+                                class="rounded-xl shadow-2xl" src="img/02_OFH_hoboi-Trai_ngay_Final.jpg" />
+                            <div
+                                class="absolute -bottom-4 -right-4 bg-secondary text-on-secondary px-6 py-2 rounded-full font-label-sm">
+                                Highlight: Bể bơi 102m</div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute top-0 right-0 w-96 h-96 bg-secondary/10 blur-[120px] -translate-y-1/2 translate-x-1/2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section: Thông Tin Sản Phẩm -->
+    <section class="py-section-padding px-margin bg-surface-container-low border-t border-outline-variant/20">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+                    🏠 Thông Tin Sản Phẩm
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">
+                    Đa dạng diện tích, đáp ứng hoàn hảo nhu cầu đầu tư và nghỉ dưỡng.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div
+                    class="bg-surface-container-lowest p-8 rounded-2xl border border-surface-variant shadow-sm hover:shadow-lg transition-all text-center">
+                    <span class="material-symbols-outlined text-5xl text-secondary mb-4 block">bed</span>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-2">Studio</h3>
+                    <p class="font-body-lg text-body-lg text-secondary-fixed-dim font-bold mb-4">38 – 47 m²</p>
+                    <div class="space-y-3 font-body-md text-body-md text-on-surface-variant text-left">
+                        <p class="flex items-start gap-2"><span
+                                class="material-symbols-outlined text-secondary text-sm mt-1">check</span> Nghỉ dưỡng cá
+                            nhân/cặp đôi</p>
+                        <p class="flex items-start gap-2"><span
+                                class="material-symbols-outlined text-secondary text-sm mt-1">check</span> Cho thuê ngắn
+                            ngày tốt nhất</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-primary p-8 rounded-2xl border border-primary-container shadow-md hover:shadow-xl transition-all text-center relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 bg-secondary text-on-secondary text-xs px-3 py-1 rounded-bl-lg font-bold">
+                        HOT</div>
+                    <span class="material-symbols-outlined text-5xl text-secondary-fixed mb-4 block">meeting_room</span>
+                    <h3 class="font-headline-md text-headline-md text-on-primary mb-2">1 Phòng ngủ</h3>
+                    <p class="font-body-lg text-body-lg text-secondary-fixed font-bold mb-4">41 – 49 m²</p>
+                    <div class="space-y-3 font-body-md text-body-md text-surface-variant text-left">
+                        <p class="flex items-start gap-2"><span
+                                class="material-symbols-outlined text-secondary-fixed text-sm mt-1">check</span> Cuối
+                            tuần linh hoạt</p>
+                        <p class="flex items-start gap-2"><span
+                                class="material-symbols-outlined text-secondary-fixed text-sm mt-1">check</span> Cân
+                            bằng ở &amp; cho thuê</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-surface-container-lowest p-8 rounded-2xl border border-surface-variant shadow-sm hover:shadow-lg transition-all text-center">
+                    <span class="material-symbols-outlined text-5xl text-secondary mb-4 block">family_home</span>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-2">2 Phòng ngủ</h3>
+                    <p class="font-body-lg text-body-lg text-secondary-fixed-dim font-bold mb-4">62 – 72 m²</p>
+                    <div class="space-y-3 font-body-md text-body-md text-on-surface-variant text-left">
+                        <p class="flex items-start gap-2"><span
+                                class="material-symbols-outlined text-secondary text-sm mt-1">check</span> Gia đình,
+                            người thân</p>
+                        <p class="flex items-start gap-2"><span
+                                class="material-symbols-outlined text-secondary text-sm mt-1">check</span> Lưu trú dài,
+                            gia đình du lịch</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section: 7 Lý Do Nên Booking -->
+    <section class="py-section-padding px-margin bg-surface-container-lowest border-t border-outline-variant/20">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+                    🔥 7 Lý Do Nên Booking NGAY Lúc Này
+                </h2>
+                <div
+                    class="bg-secondary-container/20 border border-secondary-container rounded-xl p-6 inline-block max-w-4xl mx-auto">
+                    <p class="font-body-lg text-body-lg text-on-surface-variant font-medium">
+                        <span class="text-secondary font-bold">Booking ≠ Mua liền</span> — đó là cách giữ quyền chọn căn
+                        đẹp trong giai đoạn nhạy nhất, khi giỏ hàng chưa bị xáo trộn.
+                    </p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div
+                    class="flex gap-4 p-6 bg-surface rounded-xl border border-surface-variant hover:border-secondary/50 transition-colors">
+                    <div
+                        class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-headline-md text-xl shrink-0">
+                        1</div>
+                    <div>
+                        <h4 class="font-headline-md text-lg text-primary mb-2">Ưu tiên vị trí đẹp</h4>
+                        <p class="font-body-md text-on-surface-variant">Cơ hội ưu tiên chọn căn góc, tầng đẹp với view
+                            biển trực diện hoàn mỹ nhất.</p>
+                    </div>
+                </div>
+                <div
+                    class="flex gap-4 p-6 bg-surface rounded-xl border border-surface-variant hover:border-secondary/50 transition-colors">
+                    <div
+                        class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-headline-md text-xl shrink-0">
+                        2</div>
+                    <div>
+                        <h4 class="font-headline-md text-lg text-primary mb-2">Mức giá tốt nhất</h4>
+                        <p class="font-body-md text-on-surface-variant">Chính sách giá đợt 1 luôn là mức giá khởi điểm,
+                            cơ hội tăng giá ngay sau mở bán.</p>
+                    </div>
+                </div>
+                <div
+                    class="flex gap-4 p-6 bg-surface rounded-xl border border-surface-variant hover:border-secondary/50 transition-colors">
+                    <div
+                        class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-headline-md text-xl shrink-0">
+                        3</div>
+                    <div>
+                        <h4 class="font-headline-md text-lg text-primary mb-2">Chiết khấu Early Bird</h4>
+                        <p class="font-body-md text-on-surface-variant">Hưởng trọn vẹn chính sách chiết khấu và quà tặng
+                            dành riêng cho khách hàng tiên phong.</p>
+                    </div>
+                </div>
+                <div
+                    class="flex gap-4 p-6 bg-surface rounded-xl border border-surface-variant hover:border-secondary/50 transition-colors">
+                    <div
+                        class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-headline-md text-xl shrink-0">
+                        4</div>
+                    <div>
+                        <h4 class="font-headline-md text-lg text-primary mb-2">An toàn 100%</h4>
+                        <p class="font-body-md text-on-surface-variant">Giữ nguyên quyền hoàn tiền 100% nếu không chọn
+                            được căn ưng ý trong ngày công bố.</p>
+                    </div>
+                </div>
+                <div
+                    class="flex gap-4 p-6 bg-surface rounded-xl border border-surface-variant hover:border-secondary/50 transition-colors">
+                    <div
+                        class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-headline-md text-xl shrink-0">
+                        5</div>
+                    <div>
+                        <h4 class="font-headline-md text-lg text-primary mb-2">Thanh toán linh hoạt</h4>
+                        <p class="font-body-md text-on-surface-variant">Lịch thanh toán giãn kỳ, hỗ trợ linh hoạt dòng
+                            tiền và tối ưu đòn bẩy tài chính.</p>
+                    </div>
+                </div>
+                <div
+                    class="flex gap-4 p-6 bg-surface rounded-xl border border-surface-variant hover:border-secondary/50 transition-colors">
+                    <div
+                        class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-headline-md text-xl shrink-0">
+                        6</div>
+                    <div>
+                        <h4 class="font-headline-md text-lg text-primary mb-2">Quà tặng nội thất</h4>
+                        <p class="font-body-md text-on-surface-variant">Ưu đãi độc quyền về gói nội thất chuẩn khách sạn
+                            5 sao cao cấp.</p>
+                    </div>
+                </div>
+                <div
+                    class="flex gap-4 p-6 bg-surface rounded-xl border border-surface-variant hover:border-secondary/50 transition-colors md:col-span-2 lg:col-span-1">
+                    <div
+                        class="w-12 h-12 bg-secondary text-on-secondary rounded-full flex items-center justify-center font-headline-md text-xl shrink-0 shadow-lg">
+                        7</div>
+                    <div>
+                        <h4 class="font-headline-md text-lg text-primary mb-2">Tâm điểm chú ý</h4>
+                        <p class="font-body-md text-on-surface-variant">Trở thành những chủ nhân đầu tiên của biểu tượng
+                            nghỉ dưỡng mới trên trục Trần Phú.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section: View Tổng Thể -->
+    <section class="py-section-padding px-margin bg-surface border-t border-outline-variant/20">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+                    🌆 View Tổng Thể TP — Vị Trí Trung Tâm Nha Trang
+                </h2>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-surface-container-lowest">
+                <img alt="View tổng thể TP Nha Trang nhìn từ dự án" class="w-full h-auto object-cover max-h-[700px]"
+                    src="img/11_Vew_tong_the_TP_Final.jpg" />
+                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-8">
+                    <p class="font-body-lg text-body-lg text-white text-center italic">
+                        View tổng thể TP Nha Trang nhìn từ dự án
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 4: Công Năng -->
+    <section class="py-section-padding px-margin bg-surface-container-low border-t border-outline-variant/20">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+                    💰 Công Năng — Ở Đúng Nghĩa, Cho Thuê Đúng Bài
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                <div
+                    class="bg-surface-container-lowest p-8 rounded-2xl border border-surface-variant shadow-sm hover:shadow-lg transition-all">
+                    <h3 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-3">
+                        <span class="material-symbols-outlined text-4xl text-secondary">home</span>
+                        🏡 Để Ở
+                    </h3>
+                    <ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-xl mt-1">check_circle</span>
+                            <span><strong>Kỳ nghỉ cuối tuần:</strong> Chỉ 1 bước chạm biển, thuận tiện bay từ Hà Nội vào
+                                nghỉ ngơi bất cứ lúc nào.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-xl mt-1">check_circle</span>
+                            <span><strong>Gia đình sum vầy:</strong> Không gian ấm cúng, thiết kế thông minh phù hợp cho
+                                gia đình nhiều thế hệ.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-xl mt-1">check_circle</span>
+                            <span><strong>Bàn giao 5 sao:</strong> Hoàn thiện nội thất cao cấp, sẵn sàng đón chủ nhân từ
+                                ngày nhận chìa khóa.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-xl mt-1">check_circle</span>
+                            <span><strong>Tiện ích chuẩn resort:</strong> Tận hưởng hồ bơi vô cực, Mega Vertica, Spa,
+                                Gym, nhà hàng ngay tại tòa nhà.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="bg-surface-container-lowest p-8 rounded-2xl border border-surface-variant shadow-sm hover:shadow-lg transition-all">
+                    <h3 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-3">
+                        <span class="material-symbols-outlined text-4xl text-secondary">payments</span>
+                        💵 Cho Thuê
+                    </h3>
+                    <ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-xl mt-1">check_circle</span>
+                            <span><strong>Tài sản chất lượng:</strong> Thiết kế "Art Apartment" độc đáo thu hút khách
+                                lưu trú cao cấp.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-xl mt-1">check_circle</span>
+                            <span><strong>Vận hành dễ dàng:</strong> Có thể tự quản lý hoặc hợp tác với đơn vị vận hành
+                                chuyên nghiệp.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-xl mt-1">check_circle</span>
+                            <span><strong>Bài toán cho thuê rõ ràng:</strong> Tiềm năng sinh lời bền vững từ dòng tiền
+                                cho thuê ngắn hạn và dài hạn.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary text-xl mt-1">check_circle</span>
+                            <span><strong>Nhu cầu du lịch cao:</strong> Nha Trang luôn là điểm đến hàng đầu, đảm bảo tỷ
+                                lệ lấp phòng ổn định.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 5: FAQ -->
+    <section class="py-section-padding px-margin bg-surface border-t border-outline-variant/20" id="faq">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+                    ❓ Câu Hỏi Thường Gặp
+                </h2>
+            </div>
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <details
+                    class="bg-surface-container-lowest border border-surface-variant rounded-xl group cursor-pointer">
+                    <summary
+                        class="font-headline-md text-lg text-primary p-6 flex justify-between items-center outline-none list-none">
+                        1. Dự án có phù hợp để ở lâu dài không?
+                        <span
+                            class="material-symbols-outlined text-secondary group-open:rotate-180 transition-transform duration-300">expand_more</span>
+                    </summary>
+                    <div class="p-6 pt-0 font-body-md text-on-surface-variant border-t border-surface-variant/50 mt-2">
+                        Hoàn toàn phù hợp. Thiết kế căn hộ đề cao sự riêng tư, ấm cúng cùng hệ tiện ích nội khu đầy đủ
+                        như một "thành phố thu nhỏ", đáp ứng nhu cầu sinh hoạt, giải trí, chăm sóc sức khỏe hàng ngày
+                        của cư dân.
+                    </div>
+                </details>
+                <!-- FAQ Item 2 -->
+                <details
+                    class="bg-surface-container-lowest border border-surface-variant rounded-xl group cursor-pointer">
+                    <summary
+                        class="font-headline-md text-lg text-primary p-6 flex justify-between items-center outline-none list-none">
+                        2. Hiệu quả cho thuê dự kiến ra sao?
+                        <span
+                            class="material-symbols-outlined text-secondary group-open:rotate-180 transition-transform duration-300">expand_more</span>
+                    </summary>
+                    <div class="p-6 pt-0 font-body-md text-on-surface-variant border-t border-surface-variant/50 mt-2">
+                        Nằm trên mặt tiền Trần Phú – khu vực sầm uất nhất Nha Trang, dự án hứa hẹn tỷ lệ lấp phòng cao
+                        từ khách du lịch trong và ngoài nước, đặc biệt với định vị cao cấp và tiện ích độc bản.
+                    </div>
+                </details>
+                <!-- FAQ Item 3 -->
+                <details
+                    class="bg-surface-container-lowest border border-surface-variant rounded-xl group cursor-pointer">
+                    <summary
+                        class="font-headline-md text-lg text-primary p-6 flex justify-between items-center outline-none list-none">
+                        3. Điểm nhấn độc bản của dự án là gì?
+                        <span
+                            class="material-symbols-outlined text-secondary group-open:rotate-180 transition-transform duration-300">expand_more</span>
+                    </summary>
+                    <div class="p-6 pt-0 font-body-md text-on-surface-variant border-t border-surface-variant/50 mt-2">
+                        Vị trí độc tôn "Tựa sơn nghinh hải", thiết kế "Art Apartment" mang tính nghệ thuật cao, và hệ
+                        tiện ích 5 sao như bể bơi vô cực 102m, Mega Vertica 2.000m2.
+                    </div>
+                </details>
+                <!-- FAQ Item 4 -->
+                <details
+                    class="bg-surface-container-lowest border border-surface-variant rounded-xl group cursor-pointer">
+                    <summary
+                        class="font-headline-md text-lg text-primary p-6 flex justify-between items-center outline-none list-none">
+                        4. Khi nào dự án chính thức mở bán?
+                        <span
+                            class="material-symbols-outlined text-secondary group-open:rotate-180 transition-transform duration-300">expand_more</span>
+                    </summary>
+                    <div class="p-6 pt-0 font-body-md text-on-surface-variant border-t border-surface-variant/50 mt-2">
+                        Dự kiến chính thức mở bán vào ngày 19/05/2026. Tuy nhiên, khách hàng có thể tham gia booking sớm
+                        ngay hôm nay để nhận ưu đãi.
+                    </div>
+                </details>
+                <!-- FAQ Item 5 -->
+                <details
+                    class="bg-surface-container-lowest border border-surface-variant rounded-xl group cursor-pointer">
+                    <summary
+                        class="font-headline-md text-lg text-primary p-6 flex justify-between items-center outline-none list-none">
+                        5. Ngân sách tối thiểu cần chuẩn bị là bao nhiêu?
+                        <span
+                            class="material-symbols-outlined text-secondary group-open:rotate-180 transition-transform duration-300">expand_more</span>
+                    </summary>
+                    <div class="p-6 pt-0 font-body-md text-on-surface-variant border-t border-surface-variant/50 mt-2">
+                        Với giá dự kiến từ 3,5 tỷ/căn, khách hàng có thể tận dụng các chính sách hỗ trợ tài chính để tối
+                        ưu dòng tiền, thanh toán theo tiến độ linh hoạt.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+    <!-- Section 6: CTA Cuối -->
+    <section
+        class="py-section-padding px-margin bg-primary-container text-on-primary-container border-t border-outline-variant/20 relative overflow-hidden"
+        id="booking">
+        <div
+            class="absolute top-0 left-0 w-96 h-96 bg-primary opacity-20 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2">
+        </div>
+        <div
+            class="absolute bottom-0 right-0 w-96 h-96 bg-secondary opacity-20 rounded-full blur-3xl translate-y-1/2 translate-x-1/2">
+        </div>
+        <div class="max-w-[1440px] mx-auto relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg text-on-primary mb-6">
+                        🎁 NHẬN NGAY HÔM NAY
+                    </h2>
+                    <ul class="space-y-4 font-body-lg text-body-lg text-primary-fixed-dim mb-8">
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary-fixed">done_all</span>
+                            Bảng giá chi tiết các loại căn
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary-fixed">done_all</span>
+                            Sơ đồ mặt bằng rõ nét
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary-fixed">done_all</span>
+                            Giỏ hàng 20 căn nội bộ view đẹp nhất
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary-fixed">done_all</span>
+                            Chính sách chiết khấu độc quyền
+                        </li>
+                    </ul>
+                    <div class="bg-error-container/20 border border-error-container p-4 rounded-xl inline-block">
+                        <p class="font-label-sm text-label-sm text-error font-bold flex items-center gap-2">
+                            <span class="material-symbols-outlined">warning</span>
+                            Lưu ý: Suất booking ưu tiên có giới hạn!
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-surface p-8 rounded-2xl shadow-2xl text-on-surface">
+                    <h3 class="font-headline-md text-headline-md text-primary mb-2 text-center">Để lại thông tin trong
+                        30 giây</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant text-center mb-6">Nhận tư vấn chuyên sâu
+                        ngay lập tức</p>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block font-label-sm text-label-sm text-on-surface-variant mb-1"
+                                    for="fullname">Họ và tên *</label>
+                                <input
+                                    class="w-full rounded-md border-outline-variant shadow-sm focus:border-primary focus:ring focus:ring-primary/20"
+                                    id="fullname" placeholder="Nhập họ và tên" required="" type="text" />
+                            </div>
+                            <div>
+                                <label class="block font-label-sm text-label-sm text-on-surface-variant mb-1"
+                                    for="phone">SĐT / Zalo *</label>
+                                <input
+                                    class="w-full rounded-md border-outline-variant shadow-sm focus:border-primary focus:ring focus:ring-primary/20"
+                                    id="phone" placeholder="Nhập số điện thoại" required="" type="tel" />
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block font-label-sm text-label-sm text-on-surface-variant mb-2">Khu vực sinh
+                                sống</label>
+                            <div class="flex flex-wrap gap-4">
+                                <label class="inline-flex items-center">
+                                    <input class="rounded border-outline-variant text-primary focus:ring-primary"
+                                        name="area" type="checkbox" value="hn" />
+                                    <span class="ml-2 font-body-md">Hà Nội</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input class="rounded border-outline-variant text-primary focus:ring-primary"
+                                        name="area" type="checkbox" value="hcm" />
+                                    <span class="ml-2 font-body-md">TP. HCM</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input class="rounded border-outline-variant text-primary focus:ring-primary"
+                                        name="area" type="checkbox" value="vk" />
+                                    <span class="ml-2 font-body-md">Việt Kiều</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input class="rounded border-outline-variant text-primary focus:ring-primary"
+                                        name="area" type="checkbox" value="khac" />
+                                    <span class="ml-2 font-body-md">Khác</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block font-label-sm text-label-sm text-on-surface-variant mb-2">Nhu cầu
+                                chính</label>
+                            <div class="flex flex-wrap gap-4">
+                                <label class="inline-flex items-center">
+                                    <input class="rounded border-outline-variant text-primary focus:ring-primary"
+                                        name="needs" type="checkbox" value="o" />
+                                    <span class="ml-2 font-body-md">Để ở/Nghỉ dưỡng</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input class="rounded border-outline-variant text-primary focus:ring-primary"
+                                        name="needs" type="checkbox" value="dau_tu" />
+                                    <span class="ml-2 font-body-md">Đầu tư/Cho thuê</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block font-label-sm text-label-sm text-on-surface-variant mb-2">Ngân sách dự
+                                kiến</label>
+                            <div class="flex flex-wrap gap-4">
+                                <label class="inline-flex items-center">
+                                    <input class="rounded border-outline-variant text-primary focus:ring-primary"
+                                        name="budget" type="checkbox" value="3_5" />
+                                    <span class="ml-2 font-body-md">3 - 5 tỷ</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input class="rounded border-outline-variant text-primary focus:ring-primary"
+                                        name="budget" type="checkbox" value="5_8" />
+                                    <span class="ml-2 font-body-md">5 - 8 tỷ</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input class="rounded border-outline-variant text-primary focus:ring-primary"
+                                        name="budget" type="checkbox" value="8_plus" />
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
